@@ -34,12 +34,7 @@ eureka:
   instance:
     instance-id: cloud-config-dept8001                      # 自定义服务名称信息
     prefer-ip-address: true                                 # 访问路径显示IP地址
-
-info:
-  app.name: tjhq-cloud-dev
-  company.name: www.tjhq.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
+    
 ---
 server:
   port: 8001
@@ -72,9 +67,4 @@ eureka:
     instance-id: cloud-config-dept8001                      # 自定义服务名称信息
     prefer-ip-address: true                                 # 访问路径显示IP地址
 
-info:
-  app.name: tjhq-cloud-test
-  company.name: www.tjhq.com
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
 # 请保存为UTF-8格式
