@@ -18,7 +18,7 @@ feign:
 
 eureka:
   client:
-    register-with-eureka: false
+    register-with-eureka: true
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
 
@@ -37,7 +37,7 @@ feign:
 
 eureka:
   client:
-    register-with-eureka: false
+    register-with-eureka: true
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
 # 请保存为UTF-8格式
