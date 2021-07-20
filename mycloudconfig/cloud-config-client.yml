@@ -1,0 +1,74 @@
+spring:
+  profiles:
+    active:
+    - dev
+
+---
+server:
+  port: 3355
+
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml                     # mapper映射文件
+  type-aliases-package: com.tjhq.cloud.entity                     # 所有Entity别名类所在包
+
+spring:
+  profiles: test
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource                  # 当前数据源操作类型
+    driver-class-name: com.mysql.cj.jdbc.Driver                   # mysql驱动包
+    url: jdbc:mysql://localhost:3306/clouddb02                    # 数据库名称
+    username: root
+    password: 123456
+    dbcp2:
+      min-idle: 5                                           # 数据库连接池的最小维持连接数
+      initial-size: 5                                       # 初始化连接数
+      max-total: 5                                          # 最大连接数
+      max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        hostname: 127.0.0.1
+
+info:
+  app.name: atguigu-mircroservicecloud-01
+  company.name: www.atguigu.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+---
+server:
+  port: 3366
+
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml                     # mapper映射文件
+  type-aliases-package: com.tjhq.cloud.entity                     # 所有Entity别名类所在包
+
+spring:
+  profiles: test
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource                  # 当前数据源操作类型
+    driver-class-name: com.mysql.cj.jdbc.Driver                   # mysql驱动包
+    url: jdbc:mysql://localhost:3306/clouddb02                    # 数据库名称
+    username: root
+    password: 123456
+    dbcp2:
+      min-idle: 5                                           # 数据库连接池的最小维持连接数
+      initial-size: 5                                       # 初始化连接数
+      max-total: 5                                          # 最大连接数
+      max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        hostname: 127.0.0.1
+
+info:
+  app.name: atguigu-mircroservicecloud-02
+  company.name: www.atguigu.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+# 请保存为UTF-8格式
