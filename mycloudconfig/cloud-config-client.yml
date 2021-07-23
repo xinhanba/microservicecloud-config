@@ -12,7 +12,7 @@ mybatis:
   type-aliases-package: com.tjhq.cloud.entity                     # 所有Entity别名类所在包
 
 spring:
-  profiles: test
+  profiles: dev
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource                  # 当前数据源操作类型
     driver-class-name: com.mysql.cj.jdbc.Driver                   # mysql驱动包
